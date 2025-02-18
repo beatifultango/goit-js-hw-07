@@ -6,6 +6,9 @@ document.getElementById("create").addEventListener("click", (event) => {
     createBoxes(amount);
     console.log(action);
   }else{
+    
+    
+    
    
   }
 });
@@ -29,3 +32,4 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+console.log(inputId)
