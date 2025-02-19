@@ -1,15 +1,15 @@
 document.getElementById("create").addEventListener("click", (event) => {
   const action = event.target.getAttribute("data-action");
   const amount = document.getElementById("inputId").value;
-  const container = document.getElementById("boxes");
-  if(action === "create") {
+  if (action === "create") {
     createBoxes(amount);
-    console.log(action);
-  }else{
-    
-    
-    
-   
+  }
+});
+
+document.getElementById("destroy").addEventListener("click", (event) => {
+  const action = event.target.getAttribute("data-action");
+  if (action === "destroy") {
+    destroyBoxes();
   }
 });
 
@@ -27,9 +27,13 @@ function createBoxes(amount) {
     size += 10;
   }
 }
+
+function destroyBoxes() {
+  document.getElementById("boxes").innerHTML = "";
+}
+
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
 }
-console.log(inputId)
