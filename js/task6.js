@@ -10,6 +10,7 @@ document.getElementById("destroy").addEventListener("click", (event) => {
   const action = event.target.getAttribute("data-action");
   if (action === "destroy") {
     destroyBoxes();
+    
   }
 });
 
@@ -30,6 +31,8 @@ function createBoxes(amount) {
 
 function destroyBoxes() {
   document.getElementById("boxes").innerHTML = "";
+  document.getElementById("inputId").value = "";
+  
 }
 
 function getRandomHexColor() {
